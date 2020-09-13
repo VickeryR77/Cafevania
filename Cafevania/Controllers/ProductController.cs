@@ -32,6 +32,17 @@ namespace Cafevania.Controllers
 
         }
 
+        public IActionResult Categories()
+        {
+            IDbConnection db = new SqlConnection("Server=52Y6Q13\\SQLEXPRESS;Database=Cafevania;user id=user4;password=pass1");
+            db.Open();
+            List<Product> cats = db.Query<Product>("select * from Product").AsList<Product>();
+            db.Close();
+
+            return View(cats);
+
+        }
+
         public IActionResult Details(int catid)
         {
             IDbConnection db = new SqlConnection("Server=52Y6Q13\\SQLEXPRESS;Database=Cafevania;user id=user4;password=pass1");

@@ -1,7 +1,16 @@
 ﻿@model List<Product>
 
+    <head>
+        <style>
+            body {
+                background-color: darkred;
+            }
+        </style>
+    </head>
+
         Here's the list:
         <br />
         @foreach (Product cat in Model)
         {
-<a href="/Product/Details?catid=@cat.ID">@cat.Name</a><br />}
+            <a style="color:black" href="/Product/Details?catid=@cat.ID">@cat.Name</a><br />
+        }
