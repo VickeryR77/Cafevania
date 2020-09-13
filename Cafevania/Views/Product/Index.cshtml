@@ -1,0 +1,7 @@
+﻿@model List<Product>
+
+        Here's the list:
+        <br />
+        @foreach (Product cat in Model)
+        {
+<a href="/Product/Details?catid=@cat.ID">@cat.Name</a><br />}
