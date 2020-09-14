@@ -4,6 +4,7 @@
         <style>
             body {
                 background-color: darkred;
+                color:ghostwhite;
             }
         </style>
     </head>
@@ -12,5 +13,5 @@
         <br />
         @foreach (Product cat in Model)
         {
-            <a style="color:black" href="/Product/Details?catid=@cat.ID">@cat.Name</a><br />
+            <a style="color:ghostwhite" href="/Product/Details?catid=@cat.ID">@cat.Name</a><br />
         }
